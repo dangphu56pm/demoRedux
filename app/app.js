@@ -1,8 +1,14 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Hello = require('./components/Hello');
+var List = require('List');
+var {Provider} = require('react-redux');
+var store = require('store');
+
+var Provider
 
 ReactDOM.render(
-    <Hello/>,
+  <Provider store={store}>
+    <List/>
+  </Provider>,
   document.getElementById('root')
 );
